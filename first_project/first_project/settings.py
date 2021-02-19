@@ -29,7 +29,9 @@ SECRET_KEY = 't$*-74pwu)99^auh$r#=p@iq)ax*ei&zj)5sum91oa5(ysw3*m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+'margolek.pythonanywhere.com'
+]
 
 
 # Application definition
