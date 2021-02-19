@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+{% extends "learning_templates/base.html" %}
+	{% block body_block %}
+		<h1>Welcome to index home page!</h1>
+		{{ text|cut:'world' }}
+		{{ number|add:69 }}
+	{% endblock %}
