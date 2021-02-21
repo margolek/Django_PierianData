@@ -30,7 +30,8 @@ SECRET_KEY = 't$*-74pwu)99^auh$r#=p@iq)ax*ei&zj)5sum91oa5(ysw3*m'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-'margolek.pythonanywhere.com'
+'margolek.pythonanywhere.com',
+
 ]
 
 
