@@ -1,0 +1,10 @@
+{% extends 'simpleViews/simpleViews_base.html' %}
+{% block body_block %}
+	<h1>Delete {{school.name}}?</h1>
+	{% csrf_token %}
+	<form method="POST">
+		{% csrf_token %}
+		<input type="submit" class="btn btn-danger" value="Delete">
+		<a href="{% url 'simpleViews:detail' pk=school.pk %}">Cancel</a>
+	</form>
+{% endblock %}
