@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "universities/base.html" %}
+	{% block body_block %}
+		<div class="jumbotron">
+			<h2>School Details</h2>
+			<p>Name:{{school_detail.name}}</p>
+			<p>URL:{{school_detail.url}}</p>
+			<p>Email:{{school_detail.email}}</p>
+			<p>Location:{{school_detail.location}}</p>
+		</div>
+		<div class="container">
+			<p><a class="btn btn-warning" href="{% url 'Universities:update' pk=school_detail.pk %}">Update</a></p>
+		</div>
+	{% endblock %}
