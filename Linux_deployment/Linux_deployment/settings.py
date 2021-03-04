@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Universities',
     'user_auth',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,8 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+CRIPSY_TEMPLATE_PACK = 'bootstrap5'
+
+LOGIN_REDIRECT_URL = 'Universities:index'
+LOGIN_URL =    'user_auth:login'

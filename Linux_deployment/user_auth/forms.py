@@ -1,15 +1,10 @@
 from django import forms
 from django.contrib.auth.models import User
-from user_auth.models import UserProfileSite
+from django.contrib.auth.forms import UserCreationForm
 
-class UserForm(forms.ModelForm):
-
+class UserForm(UserCreationForm):
+	email = forms.EmailField()
+	#Meta class keep configuration in one place
 	class Meta():
 		model = User
-		fields = ('username','password')
-
-class UserProfileSiteForm(forms.ModelForm):
-
-	class Meta():
-		model = UserProfileSite
-		fields = ('profile_pic')
+		fields = ['username','email','password1','password2']

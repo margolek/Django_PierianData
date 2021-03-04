@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 {% extends "user_auth/base.html" %}
-{% block bodyblock %}
+{% load crispy_forms_tags %}
+{% block body_block %}
 	<div class="content-section">
 		<h1>Register Here</h1>
 		<form method="POST">
 			<div class="form-group">
 				{% csrf_token %}
-				{{ form }}
+				{{ form|crispy }}
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">
@@ -15,7 +16,7 @@
 			</div>
 			<div class="border-top pt-3">
 				<small class="text-muted">
-				Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+				Already Have An Account? <a class="ml-2" href="{% url 'user_auth:login' %}">Sign In</a>
 				</small>
 			</div>
 		</form>

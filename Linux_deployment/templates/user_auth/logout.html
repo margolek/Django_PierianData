@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "user_auth/base.html" %}
+{% block body_block %}
+	<h2>You have been logg out</h2>
+	<div class="border-top pt-3">
+	<small class="text-muted">
+	<a href="{% url 'user_auth:login' %}">Log In Again</a>
+	</small>
+{% endblock %}
