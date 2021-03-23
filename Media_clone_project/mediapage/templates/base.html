@@ -17,7 +17,10 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 	<!--Own CSS files-->
-	<link rel="stylesheet" type="text/css" href="{% static url 'mediapage/css/master.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/master.css' %}">
+	<!--Background animation-->
+	<link rel="stylesheet" type="text/css" href="{% static 'mediapage/css/master.css' %}">
+	
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" id="navbar">
@@ -25,17 +28,17 @@
 			<a class="navbar-brand mynav" href="{% url 'home' %}">Social Page</a>
 			<ul class="navbar-right navbar-nav ms-auto">
 				{% if user.is_authenticated %}
-					<li class="nav-item"><a class="nav-link" href="{% url 'posts:create' %}">Post</a>
-						<span class="material-icons">post_add</span>
+					<li class="nav-item"><a class="nav-link" href="{% url 'posts:create' %}">
+						<span class="material-icons">post_add</span><span class="align-top"> Post</span></a>	
 					</li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'groups:all' %}">Groups</a>
-						<span class="material-icons">group</span>
+					<li class="nav-item"><a class="nav-link" href="{% url 'groups:all' %}">
+						<span class="material-icons">group</span><span class="align-top"> Groups</span></a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'groups:create' %}">Create Group</a>
-						<span class="material-icons">group_add</span>
+					<li class="nav-item"><a class="nav-link" href="{% url 'groups:create' %}">
+						<span class="material-icons">group_add</span><span class="align-top"> Create Group</span></a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
-						<span class="material-icons">logout</span>
+					<li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">
+						<span class="material-icons">logout</span><span class="align-top"> Logout</span></a>
 					</li>
 				{% else %}
 					<li class="nav-item"><a class="nav-link" href="{% url 'groups:all' %}">
@@ -56,4 +59,6 @@
 		{% endblock %}
 	</div>
 </body>
+<script type="text/javascript" src="{% static 'mediapage/js/master.js' %}">
+</script>
 </html>
